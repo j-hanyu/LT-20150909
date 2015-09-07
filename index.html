@@ -104,6 +104,25 @@ app/models/facsimile.rb:1785:in `sendable?'
 				</section>
 
 				<section>
+					<h3>nlコマンド</h3>
+					<small>入力された各行に対して行番号を付与する</small>
+					<pre><code class="bash" data-trim contenteditable>
+nl -nrz -s:
+					</code></pre>
+					<pre><code class="nohighlight" data-trim contenteditable>
+[2015-09-02 17:16:36.790770] [ip-10-50-10-13] [18854] [3] [ea41ee69a1e11a68fbe65453cd6e2123] [54.64.73.158] [52dc44eac0efd9282a20e27d98e5a4aa] [bla] Started GET "/content/facsimiles/428073/confirm?utf8=%E2%9C%93&facsimile%5Breserved%5D=0&facsimile%5Breserved_at_form%5D=2015%2F09%2F02&facsimile%5Breserved_at_to_hour%5D=18&facsimile%5Breserved_at_to_minute%5D=20&hidden_reserved_at_form=&facsimile%5Bfax_quality%5D=0&user_id=5&facsimile%5Bfax_speed%5D=1&facsimile%5Ballow_international_fax%5D=false&facsimile%5Bexcluded_contact_sets%5D%5B%5D=%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&user_id=5&facsimile%5Buse_reservation_notice%5D=true&facsimile%5Bnotice_mail_addresses%5D%5B%5D=%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&facsimile%5Bnotice_mail_addresses%5D%5B%5D=%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&bill_split_code_id=" for 54.64.73.158 at 2015-09-02 17:16:36 +0900
+[2015-09-02 17:16:36.790770] [ip-10-50-10-13] [18854] [3] [ea41ee69a1e11a68fbe65453cd6e2123] [54.64.73.158] [52dc44eac0efd9282a20e27d98e5a4aa] [bla] Processing by Content::FacsimilesController#confirm as HTML
+[2015-09-02 17:16:36.790770] [ip-10-50-10-13] [18854] [3] [ea41ee69a1e11a68fbe65453cd6e2123] [54.64.73.158] [52dc44eac0efd9282a20e27d98e5a4aa] [bla]   Parameters: {"utf8"=>"✓", "facsimile"=>{"reserved"=>"0", "reserved_at_form"=>"2015/09/02", "reserved_at_to_hour"=>"18", "reserved_at_to_minute"=>"20", "fax_quality"=>"0", "fax_speed"=>"1", "allow_international_fax"=>"false", "excluded_contact_sets"=>["選択してください"], "use_reservation_notice"=>"true", "notice_mail_addresses"=>["選択してください", "選択してください"]}, "hidden_reserved_at_form"=>"","user_id"=>"5", "bill_split_code_id"=>"", "id"=>"428073"}
+          </code></pre>
+
+					<pre><code class="nohighlight" data-trim contenteditable>
+0000001: [2015-09-02 17:16:36.790770] [ip-10-50-10-13] [18854] [3] [ea41ee69a1e11a68fbe65453cd6e2123] [54.64.73.158] [52dc44eac0efd9282a20e27d98e5a4aa] [bla] Started GET "/content/facsimiles/428073/confirm?utf8=%E2%9C%93&facsimile%5Breserved%5D=0&facsimile%5Breserved_at_form%5D=2015%2F09%2F02&facsimile%5Breserved_at_to_hour%5D=18&facsimile%5Breserved_at_to_minute%5D=20&hidden_reserved_at_form=&facsimile%5Bfax_quality%5D=0&user_id=5&facsimile%5Bfax_speed%5D=1&facsimile%5Ballow_international_fax%5D=false&facsimile%5Bexcluded_contact_sets%5D%5B%5D=%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&user_id=5&facsimile%5Buse_reservation_notice%5D=true&facsimile%5Bnotice_mail_addresses%5D%5B%5D=%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&facsimile%5Bnotice_mail_addresses%5D%5B%5D=%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&bill_split_code_id=" for 54.64.73.158 at 2015-09-02 17:16:36 +0900
+0000002: [2015-09-02 17:16:36.790770] [ip-10-50-10-13] [18854] [3] [ea41ee69a1e11a68fbe65453cd6e2123] [54.64.73.158] [52dc44eac0efd9282a20e27d98e5a4aa] [bla] Processing by Content::FacsimilesController#confirm as HTML
+0000003: [2015-09-02 17:16:36.790770] [ip-10-50-10-13] [18854] [3] [ea41ee69a1e11a68fbe65453cd6e2123] [54.64.73.158] [52dc44eac0efd9282a20e27d98e5a4aa] [bla]   Parameters: {"utf8"=>"✓", "facsimile"=>{"reserved"=>"0", "reserved_at_form"=>"2015/09/02", "reserved_at_to_hour"=>"18", "reserved_at_to_minute"=>"20", "fax_quality"=>"0", "fax_speed"=>"1", "allow_international_fax"=>"false", "excluded_contact_sets"=>["選択してください"], "use_reservation_notice"=>"true", "notice_mail_addresses"=>["選択してください", "選択してください"]}, "hidden_reserved_at_form"=>"","user_id"=>"5", "bill_split_code_id"=>"", "id"=>"428073"}
+          </code></pre>
+				</section>
+
+				<section>
 					<h3>sedコマンド</h3>
 					<small>入力された各行に対して変換などを掛ける</small>
 					<pre><code class="bash" data-trim contenteditable>
@@ -116,7 +135,6 @@ sed -e "s/^\([0-9]*\):\[\([0-9 :-]*\)\([0-9.]*\)\] /[\2] \3 [web01:\1] /"
 					<pre><code class="nohighlight" data-trim contenteditable>
 [2015-09-02 17:16:36] .790770 [web01:000001] [ip-10-50-10-13] [18854] [3] [ea41ee69a1e11a68fbe65453cd6e2123] [54.64.73.158] [52dc44eac0efd9282a20e27d98e5a4aa] [bla] Started GET "/content/facsimiles/428073/confirm?utf8=%E2%9C%93&facsimile%5Breserved%5D=0&facsimile%5Breserved_at_form%5D=2015%2F0[NR]9%2F02&facsimile%5Breserved_at_to_hour%5D=18&facsimile%5Breserved_at_to_minute%5D=20&hidden_reserved_at_form=&facsimile%5Bfax_quality%5D=0&user_id=5&facsimile%5Bfax_speed%5D=1&facsimile%5Ballow_international_fax%5D=false&facsimile%5Bexcluded_contact_sets%5D%5B%5D=%E9%81%B8%E6%8[NR]A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&user_id=5&facsimile%5Buse_reservation_notice%5D=true&facsimile%5Bnotice_mail_addresses%5D%5B%5D=%E9%81%B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&facsimile%5Bnotice_mail_addresses%5D%5B%5D=%E9%81%[NR]B8%E6%8A%9E%E3%81%97%E3%81%A6%E3%81%8F%E3%81%A0%E3%81%95%E3%81%84&bill_split_code_id=" for 54.64.73.158 at 2015-09-02 17:16:36 +0900
           </code></pre>
-
 				</section>
 
 				<section>
