@@ -187,7 +187,7 @@ cut -d ' ' -f 1,2,4,7,8,9,11-
 							<li><code class="hljs" style="display: inline;">[</code>で始まっていない行は前の行に結合<br/>（その際改行を<code class="hljs" style="display: inline;">[NR]</code>に置き換える）</li>
 							<li>各行の先頭に行番号を付与</li>
 							<li>不要な行を除外</li>
-							<li>サーバ名を付与と行番号の移動</li>
+							<li>サーバ名の付与と行番号の移動</li>
 						</ul>
 					</section>
 
@@ -195,8 +195,8 @@ cut -d ' ' -f 1,2,4,7,8,9,11-
 						<h3>結局のところ何をやっているか</h3>
 						<p><small>全サーバのログを結合して下記を実施</small></p>
 						<ul>
-							<li>日時、行番号でソート</li>
-							<li>不要な部分の除去</li>
+							<li>日時でソート</li>
+							<li>不要な項目の除去</li>
 							<li><code class="hljs" style="display: inline;">[NR]</code>を改行に戻す</li>
 						</ul>
 					</section>
